@@ -53,5 +53,21 @@
   { "id": "f13", "text": "如果可以自己訂定一條新的家規或校規", "category": "family", "lowLabel": "最貼心懂事", "highLabel": "最讓爸媽頭痛" },
   { "id": "f14", "text": "房間被你弄得最亂的時候看起來像什麼", "category": "family", "lowLabel": "只是玩具沒收", "highLabel": "像被龍捲風掃過" },
   { "id": "f15", "text": "如果能聽懂一種動物說話，你最想跟誰聊天", "category": "family", "lowLabel": "最安靜乖巧", "highLabel": "最吵鬧八卦" },
-  { "id": "f16", "text": "如果可以擁有一種神奇法寶來幫你寫作業", "category": "family", "lowLabel": "最老實輔助", "highLabel": "最作弊強大" }
+  { "id": "f16", "text": "如果可以擁有一種神奇法寶來幫你寫作業", "category": "family", "lowLabel": "最老實輔助", "highLabel": "最作弊強大" },
+  { "id": "s01", "text": "說一個當年 313 最經典的班級事件", "category": "313", "lowLabel": "最模糊沒印象", "highLabel": "最歷歷在目" },
+  { "id": "s02", "text": "當年最常被老師處罰的人做過什麼事", "category": "313", "lowLabel": "最無辜冤枉", "highLabel": "最罪有應得" },
+  { "id": "s03", "text": "畢業後最可能完全變一個人的同學", "category": "313", "lowLabel": "完全沒變", "highLabel": "路上認不出來" },
+  { "id": "s04", "text": "說一件你當年在課堂上偷做的事", "category": "313", "lowLabel": "最乖最安全", "highLabel": "最大膽" },
+  { "id": "s05", "text": "當年午休時間班上最常發生什麼", "category": "313", "lowLabel": "最安靜守規矩", "highLabel": "最無法無天" },
+  { "id": "s06", "text": "說一個你到現在還記得的老師口頭禪", "category": "313", "lowLabel": "最普通", "highLabel": "最洗腦" },
+  { "id": "s07", "text": "當年班遊或校外教學最難忘的一刻", "category": "313", "lowLabel": "最平淡無聊", "highLabel": "最徹底失控" },
+  { "id": "s08", "text": "畢業紀念冊上你寫給別人的那句話", "category": "313", "lowLabel": "最真心", "highLabel": "最敷衍" },
+  { "id": "s09", "text": "當年考試前一晚你的真實狀態", "category": "313", "lowLabel": "最有準備", "highLabel": "最擺爛" },
+  { "id": "s10", "text": "說一個只有 313 的人聽得懂的梗", "category": "313", "lowLabel": "最好解釋", "highLabel": "最沒人懂" },
+  { "id": "s11", "text": "當年班上借東西不還的經典案例", "category": "313", "lowLabel": "最無所謂", "highLabel": "最想翻臉" },
+  { "id": "s12", "text": "如果現在辦一場 313 同學會，誰最不可能出現", "category": "313", "lowLabel": "一定第一個到", "highLabel": "人間蒸發" },
+  { "id": "s13", "text": "當年你最想跟哪個同學交換座位", "category": "313", "lowLabel": "最單純", "highLabel": "最有目的" },
+  { "id": "s14", "text": "說一件當年你沒說出口的事", "category": "313", "lowLabel": "最無關緊要", "highLabel": "最想現在講" },
+  { "id": "s15", "text": "當年放學後你們最常跑去哪裡", "category": "313", "lowLabel": "最正經", "highLabel": "最不該去" },
+  { "id": "s16", "text": "形容一下當年 313 教室的味道或狀態", "category": "313", "lowLabel": "最乾淨整潔", "highLabel": "最不堪回首" }
 ]
