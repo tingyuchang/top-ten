@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Top Ten 出題</title>
+<style>
+  :root { --bg: #1b1036; --card: #fff8f0; --hot: #ff3d7f; --warm: #ffc93c; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; min-height: 100dvh; padding: 24px 16px 40px;
+    display: flex; flex-direction: column; align-items: center; gap: 20px;
+    background: radial-gradient(circle at 50% 0%, #46258c, var(--bg));
+    color: #fff; font-family: system-ui, "PingFang TC", sans-serif;
+  }
+  h1 { margin: 0; font-size: 1.6rem; letter-spacing: .1em; }
+  fieldset { border: 0; margin: 0; padding: 0; display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; }
+  label { font-size: 1rem; display: flex; align-items: center; gap: 6px; }
+  input[type=checkbox] { width: 20px; height: 20px; accent-color: var(--hot); }
+  #card {
+    width: 100%; max-width: 480px; min-height: 240px; padding: 28px 24px;
+    display: flex; flex-direction: column; justify-content: center; gap: 20px;
+    background: var(--card); color: #1b1036; border-radius: 20px;
+    box-shadow: 0 12px 0 rgba(0,0,0,.25); text-align: center;
+  }
+  #card.flip { animation: flip .5s ease; }
+  @keyframes flip {
+    from { transform: rotateY(90deg) scale(.9); opacity: 0; }
+    to { transform: none; opacity: 1; }
+  }
+  @media (prefers-reduced-motion: reduce) { #card.flip { animation: none; } }
+  #text { font-size: 1.5rem; font-weight: 700; line-height: 1.5; }
+  #range { font-size: 1rem; color: #6b4ea8; }
+  #draw {
+    width: 100%; max-width: 480px; padding: 22px; border: 0; border-radius: 999px;
+    background: var(--hot); color: #fff; font-size: 1.6rem; font-weight: 800;
+    letter-spacing: .1em; cursor: pointer; box-shadow: 0 8px 0 #b3204f;
+  }
+  #draw:active { transform: translateY(4px); box-shadow: 0 4px 0 #b3204f; }
+  #reset { background: none; border: 2px solid var(--warm); color: var(--warm);
+    padding: 10px 20px; border-radius: 999px; font-size: 1rem; cursor: pointer; }
+  #count { font-size: .9rem; opacity: .7; }
+</style>
+</head>
+<body>
+<h1>TOP TEN 出題</h1>
+
+<fieldset id="filters">
+  <label><input type="checkbox" value="mild" checked> 溫和向</label>
+  <label><input type="checkbox" value="adult" checked> 成人向</label>
+</fieldset>
+
+<div id="card">
+  <div id="text">按下按鈕開始抽題</div>
+  <div id="range"></div>
+</div>
+
+<button id="draw">抽 題</button>
+<button id="reset">重置本局</button>
+<div id="count"></div>
+
+<script>
+let questions = [];
+const used = new Set();
+const $ = id => document.getElementById(id);
+const picked = () => [...document.querySelectorAll('#filters input:checked')].map(i => i.value);
+const pool = () => questions.filter(q => picked().includes(q.category) && !used.has(q.id));
+
+function show(text, range = '') {
+  $('text').textContent = text;
+  $('range').textContent = range;
+  $('card').classList.remove('flip');
+  void $('card').offsetWidth; // ponytail: restart CSS animation
+  $('card').classList.add('flip');
+}
+
+function updateCount() {
+  $('count').textContent = `剩餘 ${pool().length} 題 / 已抽 ${used.size} 題`;
+}
+
+$('draw').onclick = () => {
+  const p = pool();
+  if (!p.length) return show('題目已抽完，可重置後再抽');
+  const q = p[Math.floor(Math.random() * p.length)];
+  used.add(q.id);
+  show(q.text, `1 是 ${q.lowLabel}，10 是 ${q.highLabel}`);
+  updateCount();
+};
+
+$('reset').onclick = () => {
+  used.clear();
+  show('新的一局，按下按鈕開始');
+  updateCount();
+};
+
+$('filters').onchange = updateCount;
+
+fetch('questions.json')
+  .then(r => r.json())
+  .then(d => { questions = d; updateCount(); })
+  .catch(() => show('題庫載入失敗，請用本機伺服器或 GitHub Pages 開啟'));
+</script>
+</body>
+</html>
