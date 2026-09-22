@@ -61,11 +61,11 @@
   { "id": "s05", "text": "誰被阿魯巴最印象深刻", "category": "313", "lowLabel": "沒有", "highLabel": "把籃球架都阿壞了" },
   { "id": "s06", "text": "說一個你到現在還記得的老師口頭禪", "category": "313", "lowLabel": "最普通", "highLabel": "最洗腦" },
   { "id": "s07", "text": "去自助餐夾菜的時候", "category": "313", "lowLabel": "付最少錢的", "highLabel": "付最多錢的" },
-  { "id": "s08", "text": "畢業紀念冊上你寫給別人的那句話", "category": "313", "lowLabel": "最真心", "highLabel": "最敷衍" },
-  { "id": "s09", "text": "當年考試前一晚你的真實狀態", "category": "313", "lowLabel": "最有準備", "highLabel": "最擺爛" },
+  { "id": "s08", "text": "同屆裡面最有名的人（在校時）", "category": "313", "lowLabel": "默默無名", "highLabel": "誰沒聽過鋒哥" },
+  { "id": "s09", "text": "合作社你買過最難忘的食物", "category": "313", "lowLabel": "最雷", "highLabel": "最好" },
   { "id": "s10", "text": "中餐大家都吃什麼", "category": "313", "lowLabel": "狗都不吃", "highLabel": "最熱門" },
   { "id": "s11", "text": "當年班上借東西不還的經典案例", "category": "313", "lowLabel": "最無所謂", "highLabel": "最想翻臉" },
   { "id": "s12", "text": "同學會，誰最不可能出現", "category": "313", "lowLabel": "一定第一個到", "highLabel": "人間蒸發" },
   { "id": "s13", "text": "誰最會遲到", "category": "313", "lowLabel": "沒有", "highLabel": "最多次" },
-  { "id": "s15", "text": "放學後你們最常跑去哪裡", "category": "313", "lowLabel": "最不可能", "highLabel": "最常去" }
+  { "id": "s14", "text": "放學後你們最常跑去哪裡", "category": "313", "lowLabel": "最不可能", "highLabel": "最常去" }
 ]
